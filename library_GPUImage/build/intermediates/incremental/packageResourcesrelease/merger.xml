@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Java All\Android Studio\YouPaiApplication\library_GPUImage\res"/><source path="D:\Java All\Android Studio\YouPaiApplication\library_GPUImage\build\generated\res\rs\release"/><source path="D:\Java All\Android Studio\YouPaiApplication\library_GPUImage\build\generated\res\resValues\release"/></dataSet><dataSet config="release"><source path="D:\Java All\Android Studio\YouPaiApplication\library_GPUImage\build-types\release\res"/></dataSet><mergedItems/></merger>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zdx.youpai.view.SlidingMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dongxu="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    dongxu:rightPadding="150dp"
+    dongxu:leftPadding="150dp"
+    android:background="@drawable/img_frame_background"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/menu_left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_viewpager2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </android.support.v4.view.ViewPager>
+
+            <include
+                layout="@layout/bottom_bar"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/menu_right"/>
+    </LinearLayout>
+
+</com.zdx.youpai.view.SlidingMenu>

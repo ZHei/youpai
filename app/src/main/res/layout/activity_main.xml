@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/id_drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_frame_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/top_bar"/>
+
+            <ImageView
+                android:id="@+id/id_action_bar_drop"
+                android:layout_width="match_parent"
+                android:layout_height="0px"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+            <include layout="@layout/bottom_bar"/>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/id_left_menu"
+            android:name="com.zdx.youpai.view.MenuLeftFragment"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:tag="LEFT"/>
+
+        <fragment
+            android:id="@+id/id_right_menu"
+            android:name="com.zdx.youpai.view.MenuRightFragment"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:tag="RIGHT"
+            tools:layout="@layout/menu_right"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
+
+

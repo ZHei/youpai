@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.zdx.youpai"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <application
+        android:name="com.zdx.youpai.YouPaiApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/img_3"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.zdx.youpai.ui.MainActivity"
+            android:icon="@drawable/img_1"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".test.ActivityYouPaiPager"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.picture.GalleryPhotoActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.picture.TakePhotoActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.picture.PictureGroupActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.picture.PictureItemActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.vedio.VedioGroupActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.vedio.VedioItemActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".ui.vedio.MediaRecorderActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+        <activity
+            android:name=".ui.vedio.MediaPreviewActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+        <activity
+            android:name=".ui.vedio.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+        <activity
+            android:name=".ui.vedio.ImportVideoFolderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+        <activity
+            android:name=".ui.vedio.ImportVideoSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+        <activity
+            android:name=".ui.vedio.ImportVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme" >
+        </activity>
+
+        <service android:name="com.yixia.camera.demo.service.MessageService" >
+            <intent-filter>
+                <action android:name="com.zdx.youpai" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
